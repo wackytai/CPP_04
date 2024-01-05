@@ -1,5 +1,4 @@
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#pragma once
 # include <iostream>
 # include <cstring>
 
@@ -9,12 +8,11 @@ class Animal
         std::string type;
     
     public:
-        Animal();
-        Animal( std::string type );
-        Animal( const Animal& object );
-        ~Animal();
+        WrongAnimal();
+        WrongAnimal( std::string type );
+        WrongAnimal( const WrongAnimal& object );
+        ~WrongAnimal();
+        WrongAnimal&    operator=( const WrongAnimal& object );
         void        makeSound( void );
         std::string getType( void ) const;
 };
-
-#endif

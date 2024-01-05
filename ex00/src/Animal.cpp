@@ -24,7 +24,7 @@ Animal::~Animal()
 Animal      Animal&::operator=( const Animal &object )
 {
     setType(object.getType());
-    std::cout << getType() << "Copy Assignment Operator called" << std::endl;
+    std::cout << getType() << "Animal Copy Assignment Operator called" << std::endl;
     return *this;
 }
 
