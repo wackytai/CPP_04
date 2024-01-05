@@ -5,12 +5,12 @@ WrongCat::WrongCat()
     std::cout << getType() << "Wrong Cat Default Constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( std::string type ) : Animal(type)
+WrongCat::WrongCat( std::string type ) : WrongAnimal(type)
 {
     std::cout << getType() << "Wrong Cat Custom Constructor called" << std::endl;
 }
 
-WrongCat::WrongCat( const WrongCat &object ) : Animal()
+WrongCat::WrongCat( const WrongCat &object ) : WrongAnimal()
 {
     *this = object;
     std::cout << getType() << "Wrong Cat Copy Constructor called" << std::endl;
