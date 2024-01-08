@@ -2,7 +2,7 @@
 # include <iostream>
 # include <cstring>
 
-class Animal
+class WrongAnimal
 {
     protected:
         std::string type;
@@ -13,6 +13,6 @@ class Animal
         WrongAnimal( const WrongAnimal& object );
         ~WrongAnimal();
         WrongAnimal&    operator=( const WrongAnimal& object );
-        void        makeSound( void );
-        std::string getType( void ) const;
+        void            makeSound( void );
+        std::string     getType( void ) const;
 };

@@ -2,27 +2,27 @@
 
 WrongCat::WrongCat()
 {
-    std::cout << getType() << "Wrong Cat Default Constructor called" << std::endl;
+    std::cout << getType() << ": Wrong Cat Default Constructor called" << std::endl;
 }
 
 WrongCat::WrongCat( std::string type ) : Animal(type)
 {
-    std::cout << getType() << "Wrong Cat Custom Constructor called" << std::endl;
+    std::cout << getType() << ": Wrong Cat Custom Constructor called" << std::endl;
 }
 
 WrongCat::WrongCat( const WrongCat &object ) : Animal()
 {
     *this = object;
-    std::cout << getType() << "Wrong Cat Copy Constructor called" << std::endl;
+    std::cout << getType() << ": Wrong Cat Copy Constructor called" << std::endl;
 }
 
 WrongCat::~WrongCat()
 {
-    std::cout << getType() << "Wrong Cat Default Destructor called" << std::endl;
+    std::cout << getType() << ": Wrong Cat Default Destructor called" << std::endl;
 }
 
 WrongCat WrongCat&::operator=( const WrongCat &object )
 {
-    setType(object.getType());
+    type = object.getType();
     return *this ;
 }

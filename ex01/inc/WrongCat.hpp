@@ -1,13 +1,13 @@
 #pragma once
 # include "WrongAnimal.hpp"
 
-class Cat: public WrongAnimal
+class WrongCat: public WrongAnimal
 {
     public:
-        Cat();
-        Cat( std::string type );
-        Cat( const Cat &object );
-        ~Cat();
-        Cat         &operator=( const Cat &object );
+        WrongCat();
+        WrongCat( std::string type );
+        WrongCat( const WrongCat &object );
+        ~WrongCat();
+        WrongCat    &operator=( const WrongCat &object );
         void        makeSound( void ) const;
 };
