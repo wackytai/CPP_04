@@ -2,10 +2,10 @@
 # include <iostream>
 # include <cstring>
 
-class Animal
+class WrongAnimal
 {
     protected:
-        static std::string type;
+        std::string _type;
     
     public:
         WrongAnimal();

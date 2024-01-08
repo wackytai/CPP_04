@@ -3,23 +3,30 @@
 Brain::Brain()
 {
     ideas = new std::string[100];
-    std::cout << "Default Constructor called" std::endl;
+    std::cout << "Default Constructor called" << std::endl;
 }
 
 Brain::Brain( const Brain& object )
 {
     *this = object;
-    std::cout << "Copy Constructor called" std::endl;
+    std::cout << "Copy Constructor called" << std::endl;
 }
 
 Brain::~Brain()
 {
-    delete ideias[];
-    std::cout << "Default Destructor called" std::endl;
+    delete[] ideas;
+    std::cout << "Default Destructor called" << std::endl;
 }
 
-Brain  Brain&::operator=( const Brain& object )
+Brain&  Brain::operator=( const Brain& object )
 {
-    ideias = new std::string(object.ideas)[100];
+    if (ideas != nullptr && ideas[0].length() > 0)
+    {
+        delete[] ideas;
+        ideas = nullptr;
+    }
+    ideas = new std::string[100];
+    for (int i = 0; i < 100; i++)
+        ideas[i] = object.ideas[i];
     return *this ;
 }

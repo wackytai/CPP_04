@@ -1,11 +1,11 @@
 #include "../inc/WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type( "generic name" )
+WrongAnimal::WrongAnimal() : _type( "wrong generic name" )
 {
     std::cout << getType() << ": Wrong Animal Default Constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal( std::string type ) : type( type )
+WrongAnimal::WrongAnimal( std::string type ) : _type( type )
 {
     std::cout << getType() << ": Wrong Animal Custom Constructor called" << std::endl;
 }
@@ -21,19 +21,19 @@ WrongAnimal::~WrongAnimal()
     std::cout << getType() << ": Wrong Animal Default Destructor called" << std::endl;
 }
 
-WrongAnimal      WrongAnimal&::operator=( const WrongAnimal &object )
+WrongAnimal&      WrongAnimal::operator=( const WrongAnimal &object )
 {
-    type = object.getType();
+    _type = object.getType();
     std::cout << getType() << ": Wrong Animal Copy Assignment Operator called" << std::endl;
     return *this;
 }
 
-void    WrongAnimal::makeSound( void ) const
+void    WrongAnimal::makeSound( void )
 {
     std::cout << "*program plays wrong generic sound*" << std::endl;
 }
 
 std::string WrongAnimal::getType( void ) const
 {
-    return type;
+    return _type;
 }
