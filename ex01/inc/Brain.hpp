@@ -12,7 +12,9 @@ class Brain
         Brain();
         Brain( const Brain& object );
         ~Brain();
-        Brain   &operator=( const Brain& object );
+        Brain       &operator=( const Brain& object );
+        std::string getIdea( int i ) const;
+        void        setIdea( int i, std::string newIdea );
 };
 
 #endif

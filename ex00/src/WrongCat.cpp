@@ -23,6 +23,7 @@ WrongCat::~WrongCat()
 
 WrongCat& WrongCat::operator=( const WrongCat &object )
 {
+    (void)object;
     return *this ;
 }
 

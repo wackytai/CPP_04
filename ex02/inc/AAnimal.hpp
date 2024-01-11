@@ -11,7 +11,7 @@ class AAnimal
     public:
         AAnimal();
         AAnimal( std::string type );
-        AAnimal( const Animal& object );
+        AAnimal( const AAnimal& object );
         virtual ~AAnimal();
         AAnimal          &operator=( const AAnimal &object );
         virtual void    makeSound( void ) const = 0;

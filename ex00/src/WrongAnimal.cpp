@@ -23,6 +23,7 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal&      WrongAnimal::operator=( const WrongAnimal &object )
 {
+    (void)object;
     std::cout << getType() << ": Wrong Animal Copy Assignment Operator called" << std::endl;
     return *this;
 }

@@ -21,16 +21,16 @@ Dog::Dog( const Dog &object ) : Animal( object.getType() )
 Dog::~Dog()
 {
     delete brain;
-    brain = nullptr;
+    brain = 0;
     std::cout << getType() << ": Dog Default Destructor called" << std::endl;
 }
 
 Dog& Dog::operator=( const Dog &object )
 {
-    if (brain == nullptr)
+    if (brain == 0)
         brain = new Brain();
     for (int i = 0; i < 100; i++)
-        brain->ideas[i] = object.brain->ideas[i];
+        brain->setIdea(i, object.brain->getIdea(i));
     return *this ;
 }
 

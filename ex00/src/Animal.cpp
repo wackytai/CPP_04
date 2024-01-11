@@ -23,6 +23,7 @@ Animal::~Animal()
 
 Animal&      Animal::operator=( const Animal &object )
 {
+    (void)object;
     std::cout << getType() << ": Animal Copy Assignment Operator called" << std::endl;
     return *this ;
 }

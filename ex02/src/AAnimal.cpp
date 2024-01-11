@@ -1,4 +1,4 @@
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 
 AAnimal::AAnimal() : _type( "Animal" )
 {
@@ -23,6 +23,7 @@ AAnimal::~AAnimal()
 
 AAnimal&      AAnimal::operator=( const AAnimal &object )
 {
+    (void)object;
     std::cout << getType() << ": Abstract Animal Copy Assignment Operator called" << std::endl;
     return *this;
 }

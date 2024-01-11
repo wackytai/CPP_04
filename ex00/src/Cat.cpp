@@ -23,6 +23,7 @@ Cat::~Cat()
 
 Cat& Cat::operator=( const Cat &object )
 {
+    (void)object;
     return *this ;
 }
 

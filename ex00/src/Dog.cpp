@@ -23,6 +23,7 @@ Dog::~Dog()
 
 Dog& Dog::operator=( const Dog &object )
 {
+    (void)object;
     return *this ;
 }
 

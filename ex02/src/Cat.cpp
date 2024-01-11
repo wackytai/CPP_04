@@ -1,18 +1,18 @@
 #include "../inc/Cat.hpp"
 
-Cat::Cat() : Animal( "Cat" )
+Cat::Cat() : AAnimal( "Cat" )
 {
     brain = new Brain();
     std::cout << getType() << ": Cat Default Constructor called" << std::endl;
 }
 
-Cat::Cat( std::string type ) : Animal( type )
+Cat::Cat( std::string type ) : AAnimal( type )
 {
     brain = new Brain();
     std::cout << getType() << ": Cat Custom Constructor called" << std::endl;
 }
 
-Cat::Cat( const Cat &object ) : Animal( object.getType() )
+Cat::Cat( const Cat &object ) : AAnimal( object.getType() )
 {
     *this = object;
     std::cout << getType() << ": Cat Copy Constructor called" << std::endl;
@@ -22,16 +22,16 @@ Cat::~Cat()
 {
     //brain->~Brain();
     delete brain;
-    brain = nullptr;
+    brain = 0;
     std::cout << getType() << ": Cat Default Destructor called" << std::endl;
 }
 
 Cat& Cat::operator=( const Cat &object )
 {    
-    if (brain == nullptr)
+    if (brain == 0)
         brain = new Brain();
     for (int i = 0; i < 100; i++)
-        brain->ideas[i] = object.brain->ideas[i];
+        brain->setIdea(i, object.brain->getIdea(i));
     return *this ;
 }
 
