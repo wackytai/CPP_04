@@ -20,6 +20,7 @@ Cat::Cat( const Cat &object ) : Animal( object.getType() )
 
 Cat::~Cat()
 {
+    //brain->~Brain();
     delete brain;
     brain = nullptr;
     std::cout << getType() << ": Cat Default Destructor called" << std::endl;

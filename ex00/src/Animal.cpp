@@ -1,6 +1,6 @@
 #include "../inc/Animal.hpp"
 
-Animal::Animal() : _type( "generic name" )
+Animal::Animal() : _type( "Animal" )
 {
     std::cout << getType() << ": Animal Default Constructor called" << std::endl;
 }

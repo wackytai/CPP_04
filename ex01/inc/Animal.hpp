@@ -6,16 +6,16 @@
 class Animal
 {
     protected:
-        std::string _type;
+        const std::string _type;
     
     public:
         Animal();
         Animal( std::string type );
-        Animal( const Animal &object );
-        virtual ~Animal();
-        Animal                      &operator=( const Animal &object );
-        virtual void                makeSound( void ) const;
-        std::string                 getType( void ) const;
+        Animal( const Animal& object );
+        virtual         ~Animal();
+        Animal          &operator=( const Animal &object );
+        virtual void    makeSound( void ) const;
+        std::string     getType( void ) const;
 };
 
 #endif
