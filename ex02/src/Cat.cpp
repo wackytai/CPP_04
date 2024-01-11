@@ -20,18 +20,14 @@ Cat::Cat( const Cat &object ) : AAnimal( object.getType() )
 
 Cat::~Cat()
 {
-    //brain->~Brain();
     delete brain;
     brain = 0;
     std::cout << getType() << ": Cat Default Destructor called" << std::endl;
 }
 
 Cat& Cat::operator=( const Cat &object )
-{    
-    if (brain == 0)
-        brain = new Brain();
-    for (int i = 0; i < 100; i++)
-        brain->setIdea(i, object.brain->getIdea(i));
+{   
+    *brain = *object.brain;
     return *this ;
 }
 

@@ -12,7 +12,7 @@ Animal::Animal( std::string type ) : _type( type )
 
 Animal::Animal( const Animal& object ) : _type( object.getType() )
 {
-    *this = object;
+    //*this = object;
     std::cout << getType() << ": Animal Copy Constructor called" << std::endl;
 }
 

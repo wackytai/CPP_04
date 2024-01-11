@@ -4,16 +4,8 @@
 
 class ICharacter
 {
-    protected:
-        std::string const   _name;
-        int                 inventory[3];
-
     public:
-        ICharacter();
-        ICharacter( std::string const &name );
-        ICharacter( const ICharacter &object );
-        virtual ~ICharacter();
-        ICharacter& operator=(const ICharacter &object);
+        virtual ~ICharacter() {};
         virtual std::string const & getName() const = 0;
         virtual void equip(AMateria* m) = 0;
         virtual void unequip(int idx) = 0;

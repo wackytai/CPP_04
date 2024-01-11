@@ -27,10 +27,7 @@ Dog::~Dog()
 
 Dog& Dog::operator=( const Dog &object )
 {
-    if (brain == 0)
-        brain = new Brain();
-    for (int i = 0; i < 100; i++)
-        brain->setIdea(i, object.brain->getIdea(i));
+    *brain = *object.brain;
     return *this ;
 }
 
