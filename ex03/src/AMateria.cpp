@@ -2,7 +2,7 @@
 
 AMateria::AMateria() : _type( "" ) {}
 
-AMateria::AMateria( std::string const &type ) : _type( type ) {}
+AMateria::AMateria( std::string const& type ) : _type( type ) {}
 
 AMateria::~AMateria() {}
 

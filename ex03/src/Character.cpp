@@ -1,6 +1,6 @@
 #include "../inc/Character.hpp"
 
-Character::Character()
+Character::Character() : _name( "human" )
 {
 	for (int i = 0; i < 4; i++)
 		inventory[i] = 0;
@@ -94,7 +94,7 @@ void Character::use(int idx, ICharacter& target)
 	if (idx < 3 && idx >= 0 && inventory[idx] != 0)
 	{
 		inventory[idx]->use(target);
-		std::cout << inventory[idx]->getType() << ": "
+		std::cout << inventory[idx]->getType() << ": used" << std::endl;
 		return ;
 	}
 	if (!(idx < 3 && idx >= 0))
