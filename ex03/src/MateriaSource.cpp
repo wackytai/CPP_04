@@ -29,13 +29,19 @@ MateriaSource& MateriaSource::operator=( const MateriaSource& object )
 void MateriaSource::learnMateria(AMateria* m)
 {
 	if (!m)
+	{
+		std::cout << "Can't learn empty materia!" << std::endl;
 		return ;
+	}
 	for (int i = 0; i < 4; i++)
 	{
 		if (materia[i] == 0)
 			materia[i] = m;
 		else if (i == 3 && materia[i])
+		{
+			std::cout << "No room to learn materia!" << std::endl;
 			return ;
+		}
 	}
 }
 
@@ -46,6 +52,6 @@ AMateria* MateriaSource::createMateria(std::string const &type)
 		if (materia[i] && type == materia[i]->getType())
 			return materia[i]->clone();
 	}
-	std::cout << "Don't know " << type << std::endl;
+	std::cout << "Can't create " << type << ": no knowledge!" << std::endl;
 	return 0;
 }
