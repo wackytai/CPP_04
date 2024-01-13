@@ -1,11 +1,11 @@
 #include "../inc/Cure.hpp"
 
-Cure::Cure()
+Cure::Cure() : AMateria()
 {
     _type = "cure";
 }
 
-Cure::Cure( const Cure& object )
+Cure::Cure( const Cure& object ) : AMateria()
 {
     *this = object;
 }
