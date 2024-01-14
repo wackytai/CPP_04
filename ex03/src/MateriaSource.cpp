@@ -13,9 +13,8 @@ MateriaSource::MateriaSource( const MateriaSource& object )
 
 MateriaSource::~MateriaSource()
 {
-	for (int i = 0; i < 4; i++)
-		if (materia[i] != 0)
-			delete materia[i];
+	for (int i = 0; i < 4 && materia[i]; i++)
+		delete materia[i];
 }
 
 MateriaSource& MateriaSource::operator=( const MateriaSource& object )
@@ -42,7 +41,10 @@ void MateriaSource::learnMateria(AMateria* m)
 	for (int i = 0; i < 4; i++)
 	{
 		if (materia[i] == 0)
+		{
 			materia[i] = m;
+			return ;
+		}
 		else if (i == 3 && materia[i])
 		{
 			std::cout << "No room to learn materia!" << std::endl;
