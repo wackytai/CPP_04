@@ -16,6 +16,8 @@ Character::Character( const std::string name ) : _name( name )
 
 Character::Character( const Character& object) : _name ( object.getName() )
 {
+	for (int i = 0; i < 4; i++)
+		inventory[i] = 0;
 	*this = object;
 	std::cout << getName() << ": Copy Constructor called" << std::endl;
 }
@@ -76,10 +78,10 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	if (idx < 3 && idx >= 0 && inventory[idx] != 0)
+	if (idx <= 3 && idx >= 0 && inventory[idx] != 0)
 	{
-		inventory[idx] = 0;
 		std::cout << inventory[idx]->getType() << ": Materia unequipped" << std::endl;
+		inventory[idx] = 0;
 		return ;
 	}
 	if (!(idx < 3 && idx >= 0))
