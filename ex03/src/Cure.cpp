@@ -1,6 +1,6 @@
 #include "../inc/Cure.hpp"
 
-Cure::Cure() : AMateria()
+Cure::Cure()
 {
     _type = "cure";
 }

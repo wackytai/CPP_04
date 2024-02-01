@@ -1,11 +1,11 @@
 #include "../inc/Ice.hpp"
 
-Ice::Ice() : AMateria( "ice" )
+Ice::Ice()
 {
     _type = "ice";
 }
 
-Ice::Ice( const Ice& object ) : AMateria( "ice" )
+Ice::Ice( const Ice& object ) : AMateria()
 {
     *this = object;
 }

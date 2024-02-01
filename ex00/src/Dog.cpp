@@ -5,11 +5,6 @@ Dog::Dog() : Animal( "Dog" )
     std::cout << getType() << ": Dog Default Constructor called" << std::endl;
 }
 
-Dog::Dog( std::string type ) : Animal( type )
-{
-    std::cout << getType() << ": Dog Custom Constructor called" << std::endl;
-}
-
 Dog::Dog( const Dog &object ) : Animal( object.getType() )
 {
     *this = object;

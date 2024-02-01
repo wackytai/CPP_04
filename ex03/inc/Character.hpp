@@ -1,10 +1,11 @@
 #pragma once
 # include <string>
-# include <iostream>
-# include "AMateria.hpp"
 # include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class Character : public ICharacter
+class AMateria;
+
+class Character: public ICharacter
 {
     private:
         std::string        _name;

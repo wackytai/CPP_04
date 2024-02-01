@@ -1,6 +1,6 @@
 #include "../inc/Character.hpp"
 
-Character::Character() : _name( "Human" )
+Character::Character() : _name( "human" )
 {
 	for (int i = 0; i < 4; i++)
 		inventory[i] = 0;
@@ -33,15 +33,16 @@ Character::~Character()
 Character& Character::operator=( const Character& object )
 {
 	_name = object.getName();
-	for (int i = 0; i < 4 && object.inventory[i]; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		if (inventory[i])
 		{
 			delete inventory[i];
 			inventory[i] = 0;
 		}
-		inventory[i] = object.inventory[i]->clone();
 	}
+	for (int i = 0; i < 4; i++)
+		inventory[i] = object.inventory[i]->clone();
 	return *this;
 }
 

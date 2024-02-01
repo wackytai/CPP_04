@@ -10,11 +10,12 @@ class Dog: public AAnimal
 
     public:
         Dog();
-        Dog( std::string type );
         Dog( const Dog &object );
         ~Dog();
         Dog     &operator=( const Dog &object );
         void    makeSound( void ) const;
+        void    think( int i, std::string idea );
+        void    speak( int i );
 };
 
 #endif

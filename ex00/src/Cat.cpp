@@ -5,11 +5,6 @@ Cat::Cat() : Animal( "Cat" )
     std::cout << getType() << ": Cat Default Constructor called" << std::endl;
 }
 
-Cat::Cat( std::string type ) : Animal( type )
-{
-    std::cout << getType() << ": Cat Custom Constructor called" << std::endl;
-}
-
 Cat::Cat( const Cat &object ) : Animal( object.getType() )
 {
     *this = object;

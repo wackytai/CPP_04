@@ -13,21 +13,16 @@ MateriaSource::MateriaSource( const MateriaSource& object )
 
 MateriaSource::~MateriaSource()
 {
-	for (int i = 0; i < 4 && materia[i]; i++)
-		delete materia[i];
+	for (int i = 0; i < 4; i++)
+		if (materia[i] != 0)
+			delete materia[i];
 }
 
 MateriaSource& MateriaSource::operator=( const MateriaSource& object )
 {
 	for (int i = 0; i < 4; i++)
-	{
-		if (materia[i])
-			delete materia[i];
-		if (object.materia[i])
+		if (object.materia[i] != 0)
 			materia[i] = object.materia[i]->clone();
-		else
-			materia[i] = 0;
-	}
 	return *this;
 }
 

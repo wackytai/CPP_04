@@ -1,6 +1,5 @@
 #pragma once
 # include <string>
-# include <iostream>
 # include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource
